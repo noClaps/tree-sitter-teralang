@@ -16,3 +16,5 @@
 ] @punctuation.bracket
 
 (comment) @comment
+
+(method) @constant
