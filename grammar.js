@@ -11,7 +11,20 @@ module.exports = grammar({
   name: "teralang",
 
   rules: {
-    // TODO: add the actual grammar rules
-    source_file: $ => "hello"
-  }
+    source_file: ($) => seq(repeat($.import), repeat($.route)),
+    string: (_) => seq(`"`, /[^"]*/, `"`),
+    number: (_) => /\d+/,
+
+    import: ($) => seq("import", $.string),
+
+    route: ($) => seq("route", $.string, $.method, ":", $.struct),
+    method: ($) => /[A-Z]+/,
+    struct: ($) => seq("{", repeat(seq($.key, ":", $.value)), "}"),
+    key: (_) => /\w+/,
+    value: ($) => choice($.string, $.number, $.struct),
+
+    // Extra
+    comment: (_) => seq("//", /.*/),
+  },
+  extras: ($) => [/\s/, $.comment],
 });

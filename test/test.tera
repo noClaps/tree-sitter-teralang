@@ -1,0 +1,8 @@
+import "./hello-world"
+
+route "/ping" GET: {
+  status: 200 // optional
+  json: {
+    message: "pong"
+  }
+}
