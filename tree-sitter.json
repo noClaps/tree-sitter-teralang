@@ -1,0 +1,40 @@
+{
+  "$schema": "https://tree-sitter.github.io/tree-sitter/assets/schemas/config.schema.json",
+  "grammars": [
+    {
+      "name": "teralang",
+      "camelcase": "TeraLang",
+      "title": "TeraLang",
+      "scope": "source.teralang",
+      "file-types": [
+        "tera"
+      ],
+      "injection-regex": "^teralang$",
+      "class-name": "TreeSitterTeralang"
+    }
+  ],
+  "metadata": {
+    "version": "0.1.0",
+    "license": "0BSD",
+    "description": "Teralang grammar for tree-sitter",
+    "authors": [
+      {
+        "name": "noClaps",
+        "email": "contact@zerolimits.dev",
+        "url": "https://zerolimits.dev/"
+      }
+    ],
+    "links": {
+      "repository": "https://github.com/noClaps/tree-sitter-teralang"
+    }
+  },
+  "bindings": {
+    "c": true,
+    "go": true,
+    "node": true,
+    "python": true,
+    "rust": true,
+    "swift": true,
+    "zig": false
+  }
+}
