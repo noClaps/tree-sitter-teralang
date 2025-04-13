@@ -1,4 +1,4 @@
-import "./hello-world"
+import "./hello-world.tera"
 
 route "/ping" GET: {
   status: 200 // optional
