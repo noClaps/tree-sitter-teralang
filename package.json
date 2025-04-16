@@ -2,7 +2,7 @@
   "name": "tree-sitter-teralang",
   "version": "0.1.0",
   "description": "Teralang grammar for tree-sitter",
-  "repository": "https://github.com/noclaps/tree-sitter-teralang",
+  "repository": "https://github.com/tera-language/tree-sitter-teralang",
   "license": "0BSD",
   "author": {
     "name": "noClaps",

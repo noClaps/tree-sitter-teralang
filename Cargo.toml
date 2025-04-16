@@ -7,7 +7,7 @@ license = "0BSD"
 readme = "README.md"
 keywords = ["incremental", "parsing", "tree-sitter", "teralang"]
 categories = ["parser-implementations", "parsing", "text-editors"]
-repository = "https://github.com/noclaps/tree-sitter-teralang"
+repository = "https://github.com/tera-language/tree-sitter-teralang"
 edition = "2021"
 autoexamples = false
 

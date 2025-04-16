@@ -1,4 +1,4 @@
-module github.com/noclaps/tree-sitter-teralang
+module github.com/tera-language/tree-sitter-teralang
 
 go 1.22
 

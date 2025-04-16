@@ -6,9 +6,7 @@
       "camelcase": "TeraLang",
       "title": "TeraLang",
       "scope": "source.teralang",
-      "file-types": [
-        "tera"
-      ],
+      "file-types": ["tera"],
       "injection-regex": "^teralang$",
       "class-name": "TreeSitterTeralang"
     }
@@ -25,7 +23,7 @@
       }
     ],
     "links": {
-      "repository": "https://github.com/noClaps/tree-sitter-teralang"
+      "repository": "https://github.com/tera-language/tree-sitter-teralang"
     }
   },
   "bindings": {
