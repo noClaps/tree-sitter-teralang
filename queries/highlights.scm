@@ -18,3 +18,5 @@
 (comment) @comment
 
 (method) @constant
+
+(key) @property
