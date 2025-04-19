@@ -12,7 +12,7 @@ module.exports = grammar({
 
   rules: {
     source_file: ($) => seq(repeat($.import), repeat($.route)),
-    string: (_) => seq(`"`, /[^"]*/, `"`),
+    string: (_) => token(seq(`"`, /[^"]*/, `"`)),
     number: (_) => /\d+/,
 
     import: ($) => seq("import", $.string),

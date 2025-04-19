@@ -63,11 +63,6 @@
     }
   },
   {
-    "type": "string",
-    "named": true,
-    "fields": {}
-  },
-  {
     "type": "struct",
     "named": true,
     "fields": {},
@@ -110,10 +105,6 @@
     }
   },
   {
-    "type": "\"",
-    "named": false
-  },
-  {
     "type": "//",
     "named": false
   },
@@ -140,6 +131,10 @@
   {
     "type": "route",
     "named": false
+  },
+  {
+    "type": "string",
+    "named": true
   },
   {
     "type": "{",
