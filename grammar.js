@@ -18,7 +18,7 @@ module.exports = grammar({
     import: ($) => seq("import", $.string),
 
     route: ($) => seq("route", $.string, $.method, ":", $.struct),
-    method: ($) => /[A-Z]+/,
+    method: (_) => /[A-Z]+/,
     struct: ($) => seq("{", repeat(seq($.key, ":", $.value)), "}"),
     key: (_) => /\w+/,
     value: ($) => choice($.string, $.number, $.struct),
