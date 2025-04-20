@@ -13,15 +13,17 @@ module.exports = grammar({
   rules: {
     source_file: ($) => seq(repeat($.import), repeat($.route)),
     string: (_) => token(seq(`"`, /[^"]*/, `"`)),
-    number: (_) => /\d+/,
+    int: (_) => /-?\d+/,
+    float: (_) => /-?\d+(\.?\d*)/,
+    bool: (_) => choice("true", "false"),
 
     import: ($) => seq("import", $.string),
 
     route: ($) => seq("route", $.string, $.method, ":", $.struct),
     method: (_) => /[A-Z]+/,
     struct: ($) => seq("{", repeat(seq($.key, ":", $.value)), "}"),
-    key: (_) => /\w+/,
-    value: ($) => choice($.string, $.number, $.struct),
+    key: ($) => choice(/\w+/, $.string),
+    value: ($) => choice($.string, $.int, $.float, $.bool, $.struct),
 
     // Extra
     comment: (_) => seq("//", /.*/),

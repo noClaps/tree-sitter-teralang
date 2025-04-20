@@ -4,7 +4,9 @@
 ] @keyword
 
 (string) @string
-(number) @number
+(float) @number
+(int) @number
+(bool) @boolean
 
 [
   ":"

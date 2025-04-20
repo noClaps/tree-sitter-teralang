@@ -41,9 +41,26 @@
         ]
       }
     },
-    "number": {
+    "int": {
       "type": "PATTERN",
-      "value": "\\d+"
+      "value": "-?\\d+"
+    },
+    "float": {
+      "type": "PATTERN",
+      "value": "-?\\d+(\\.?\\d*)"
+    },
+    "bool": {
+      "type": "CHOICE",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "true"
+        },
+        {
+          "type": "STRING",
+          "value": "false"
+        }
+      ]
     },
     "import": {
       "type": "SEQ",
@@ -121,28 +138,42 @@
       ]
     },
     "key": {
-      "type": "PATTERN",
-      "value": "\\w+"
+      "type": "CHOICE",
+      "members": [
+        {
+          "type": "PATTERN",
+          "value": "\\w+"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "string"
+        }
+      ]
     },
     "value": {
-      "type": "TOKEN",
-      "content": {
-        "type": "CHOICE",
-        "members": [
-          {
-            "type": "SYMBOL",
-            "name": "string"
-          },
-          {
-            "type": "SYMBOL",
-            "name": "number"
-          },
-          {
-            "type": "SYMBOL",
-            "name": "struct"
-          }
-        ]
-      }
+      "type": "CHOICE",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "string"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "int"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "float"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "bool"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "struct"
+        }
+      ]
     },
     "comment": {
       "type": "SEQ",

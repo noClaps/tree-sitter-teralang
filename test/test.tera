@@ -4,5 +4,8 @@ route "/ping" GET: {
   status: 200 // optional
   json: {
     message: "pong"
+    "my-key": "value"
+    "bool-key": true
+    "float-key": 3.14
   }
 }
